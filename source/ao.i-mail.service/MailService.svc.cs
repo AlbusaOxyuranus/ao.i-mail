@@ -35,8 +35,9 @@ namespace ao.i_mail.service
         public Config CreateConfig(User user, Config config)
         {
            using (var bc = new BusinessContext(new AppMode()))
-            {
-                return bc.Add(new Config() { Key = "DenisProfile", Value = "config-json", UserId =user.Id });
+           {
+               config.UserId = user.Id;
+                return bc.Add(config);
             }
         }
     }

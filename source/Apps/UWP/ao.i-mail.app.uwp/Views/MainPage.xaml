@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="ao.i_mail.app.uwp.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ao.i_mail.app.uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:ao.i_mail.app.uwp.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    d:DataContext="{d:DesignInstance viewModels:TestViewModel}">
+    
+    <Grid>
+        <StackPanel Margin="100" Background="Gray">
+            <TextBlock>Key</TextBlock>
+            <TextBox Text="{Binding Key,Mode=TwoWay}"></TextBox>
+            <TextBlock>Velue</TextBlock>
+            <TextBox Text="{Binding Value,Mode=TwoWay}"></TextBox>
+            <Button Click="ButtonBase_OnClick" Width="200" Height="200">click Me</Button>
+        </StackPanel>
+    </Grid>
+</Page>
