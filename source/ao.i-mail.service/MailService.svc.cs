@@ -8,12 +8,12 @@ namespace ao.i_mail.service
     // NOTE: In order to launch WCF Test Client for testing this service, please select MailService.svc or MailService.svc.cs at the Solution Explorer and start debugging.
     public class MailService : IMailService
     {
-        public void Authentication(MUser user)
+        public void Authentication(User user)
         {
             throw new NotImplementedException();
         }
 
-        public MUser CreateUser(MUser user)
+        public User CreateUser(User user)
         {
             //var myBinding = new BasicHttpBinding();
             //var myEndpoint = new EndpointAddress("http://localhost:62786/AccountService.svc");
@@ -21,7 +21,7 @@ namespace ao.i_mail.service
             //var client = new AccountServiceClient(myBinding,myEndpoint);
             var client = new AccountServiceClient();
             var r= client.CreateUser(new User() { Password = "ps", Username = "ddd" });
-            return new MUser();
+            return new User();
         }
 
         public void GetUser(int id)

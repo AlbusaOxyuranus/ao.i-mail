@@ -4,7 +4,8 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ao.i_mail.service" />
+      <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ao.i_account.service.models" />
+      <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ao.i_mail.service" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IMailService_CreateUser_InputMessage">

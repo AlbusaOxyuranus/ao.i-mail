@@ -11,7 +11,7 @@ namespace ao.i_mail.service
     public interface IMailService
     {
         [OperationContract]
-        MUser CreateUser(MUser user);
+        User CreateUser(User user);
 
         [OperationContract]
         void GetUser(int id);

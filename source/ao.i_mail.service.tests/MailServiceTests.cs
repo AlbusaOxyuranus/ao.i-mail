@@ -10,7 +10,7 @@ namespace ao.i_mail.service.tests
         public void CreateUser_Test()
         {
             var client = new MailServiceClient();
-            var user = new MUser() {UserName = "MailServiceTests"};
+            var user = new User() {Username = "MailServiceTests",Password = "000"};
             var resultUser = client.CreateUser(user);
             
         }
