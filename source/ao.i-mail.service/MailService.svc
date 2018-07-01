@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ao.i_mail.service.MailService" CodeBehind="MailService.svc.cs" %>
