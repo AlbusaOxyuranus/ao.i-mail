@@ -64,17 +64,17 @@
     <None Include="Connected Services\i_MailService\ao.i_mail.service.tests.i_MailService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\i_MailService\MailService.wsdl" />
-    <None Include="Connected Services\i_MailService\MailService.xsd">
+    <None Include="Connected Services\i_MailService\MailService1.wsdl" />
+    <None Include="Connected Services\i_MailService\MailService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\i_MailService\MailService1.xsd">
+    <None Include="Connected Services\i_MailService\MailService41.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\i_MailService\MailService2.xsd">
+    <None Include="Connected Services\i_MailService\MailService42.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\i_MailService\MailService3.xsd">
+    <None Include="Connected Services\i_MailService\MailService43.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -85,9 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\i_MailService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\i_MailService\MailService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\i_MailService\configuration91.svcinfo" />
@@ -107,7 +104,9 @@
       <Name>ao.i-mail.service.data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Connected Services\i_MailService\MailService1.disco" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
