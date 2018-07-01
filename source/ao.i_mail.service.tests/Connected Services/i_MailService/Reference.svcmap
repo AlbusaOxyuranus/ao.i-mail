@@ -22,12 +22,11 @@
     <MetadataSource Address="http://localhost:48465/MailService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MailService.xsd" MetadataType="Schema" ID="dd5f4d8f-2a2a-4e16-9617-166fe88bbaea" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd0" />
-    <MetadataFile FileName="MailService1.xsd" MetadataType="Schema" ID="45e36a56-e11a-4749-838b-c4b54c5bfa1b" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd1" />
-    <MetadataFile FileName="MailService.wsdl" MetadataType="Wsdl" ID="655f4cb6-fb32-4476-a457-d79cf63af3bc" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?wsdl" />
-    <MetadataFile FileName="MailService2.xsd" MetadataType="Schema" ID="ca401302-ead7-4d99-be19-e57d21d5e73d" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd2" />
     <MetadataFile FileName="MailService.disco" MetadataType="Disco" ID="81e5b944-5cbd-4c52-a105-3d14bdf481a8" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?disco" />
-    <MetadataFile FileName="MailService3.xsd" MetadataType="Schema" ID="56271770-f46d-4556-9108-c9ab6be5180e" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MailService1.xsd" MetadataType="Schema" ID="45e36a56-e11a-4749-838b-c4b54c5bfa1b" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MailService2.xsd" MetadataType="Schema" ID="ca401302-ead7-4d99-be19-e57d21d5e73d" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MailService.xsd" MetadataType="Schema" ID="dd5f4d8f-2a2a-4e16-9617-166fe88bbaea" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MailService.wsdl" MetadataType="Wsdl" ID="655f4cb6-fb32-4476-a457-d79cf63af3bc" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

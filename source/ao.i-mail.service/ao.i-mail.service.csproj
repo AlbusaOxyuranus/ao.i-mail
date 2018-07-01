@@ -64,7 +64,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\i_AccountService\AccountService.disco" />
+    <None Include="Connected Services\i_AccountService\AccountService1.disco" />
     <Content Include="Connected Services\i_AccountService\ao.i_mail.service.i_AccountService.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -74,6 +74,19 @@
     <Content Include="Connected Services\i_AccountService\ao.i_mail.service.i_AccountService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\i_AccountService\AccountService1.wsdl" />
+    <None Include="Connected Services\i_AccountService\AccountService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\i_AccountService\AccountService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\i_AccountService\AccountService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\i_AccountService\AccountService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\i_AccountService\configuration91.svcinfo" />
     <None Include="Connected Services\i_AccountService\configuration.svcinfo" />
     <None Include="Connected Services\i_AccountService\Reference.svcmap">
@@ -99,19 +112,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\i_AccountService\AccountService.wsdl" />
-    <None Include="Connected Services\i_AccountService\AccountService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\i_AccountService\AccountService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\i_AccountService\AccountService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\i_AccountService\AccountService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Properties\DataSources\ao.i_account.service.models.User.datasource" />
     <Content Include="Properties\DataSources\ao.i_account.service.models.Service.datasource" />
     <None Include="Web.Debug.config">

@@ -15,21 +15,15 @@ namespace ao.i_mail.service.tests.i_MailService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/ao.i_account.service.models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MUser", Namespace="http://schemas.datacontract.org/2004/07/ao.i_mail.service")]
     [System.SerializableAttribute()]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class MUser : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsernameField;
+        private string UserNameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -42,40 +36,14 @@ namespace ao.i_mail.service.tests.i_MailService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
+        public string UserName {
             get {
-                return this.IdField;
+                return this.UserNameField;
             }
             set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Username {
-            get {
-                return this.UsernameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
-                    this.UsernameField = value;
-                    this.RaisePropertyChanged("Username");
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
                 }
             }
         }
@@ -156,10 +124,10 @@ namespace ao.i_mail.service.tests.i_MailService {
     public interface IMailService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMailService/CreateUser", ReplyAction="http://tempuri.org/IMailService/CreateUserResponse")]
-        ao.i_mail.service.tests.i_MailService.User CreateUser(ao.i_mail.service.tests.i_MailService.User user);
+        ao.i_mail.service.tests.i_MailService.MUser CreateUser(ao.i_mail.service.tests.i_MailService.MUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMailService/CreateUser", ReplyAction="http://tempuri.org/IMailService/CreateUserResponse")]
-        System.Threading.Tasks.Task<ao.i_mail.service.tests.i_MailService.User> CreateUserAsync(ao.i_mail.service.tests.i_MailService.User user);
+        System.Threading.Tasks.Task<ao.i_mail.service.tests.i_MailService.MUser> CreateUserAsync(ao.i_mail.service.tests.i_MailService.MUser user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMailService/GetUser", ReplyAction="http://tempuri.org/IMailService/GetUserResponse")]
         void GetUser(int id);
@@ -207,11 +175,11 @@ namespace ao.i_mail.service.tests.i_MailService {
                 base(binding, remoteAddress) {
         }
         
-        public ao.i_mail.service.tests.i_MailService.User CreateUser(ao.i_mail.service.tests.i_MailService.User user) {
+        public ao.i_mail.service.tests.i_MailService.MUser CreateUser(ao.i_mail.service.tests.i_MailService.MUser user) {
             return base.Channel.CreateUser(user);
         }
         
-        public System.Threading.Tasks.Task<ao.i_mail.service.tests.i_MailService.User> CreateUserAsync(ao.i_mail.service.tests.i_MailService.User user) {
+        public System.Threading.Tasks.Task<ao.i_mail.service.tests.i_MailService.MUser> CreateUserAsync(ao.i_mail.service.tests.i_MailService.MUser user) {
             return base.Channel.CreateUserAsync(user);
         }
         

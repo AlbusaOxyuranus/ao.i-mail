@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ServiceModel;
-using System.Web.Services.Description;
 using ao.i_mail.service.i_AccountService;
 
 namespace ao.i_mail.service
@@ -9,18 +8,20 @@ namespace ao.i_mail.service
     // NOTE: In order to launch WCF Test Client for testing this service, please select MailService.svc or MailService.svc.cs at the Solution Explorer and start debugging.
     public class MailService : IMailService
     {
-        public void Authentication(User user)
+        public void Authentication(MUser user)
         {
             throw new NotImplementedException();
         }
 
-        public User CreateUser(User user)
+        public MUser CreateUser(MUser user)
         {
-            var myBinding = new BasicHttpBinding();
-            var myEndpoint = new EndpointAddress("http://i-account.xcs.local/AccountService.svc");
-            //var myChannelFactory = new ChannelFactory<IMyService>(myBinding, myEndpoint);
-            var client = new AccountServiceClient(myBinding,myEndpoint);
-            return client.CreateUser(user);
+            //var myBinding = new BasicHttpBinding();
+            //var myEndpoint = new EndpointAddress("http://localhost:62786/AccountService.svc");
+            ////var myChannelFactory = new ChannelFactory<IMyService>(myBinding, myEndpoint);
+            //var client = new AccountServiceClient(myBinding,myEndpoint);
+            var client = new AccountServiceClient();
+            var r= client.CreateUser(new User() { Password = "ps", Username = "ddd" });
+            return new MUser();
         }
 
         public void GetUser(int id)

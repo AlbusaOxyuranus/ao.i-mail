@@ -11,7 +11,7 @@ namespace ao.i_mail.service
     public interface IMailService
     {
         [OperationContract]
-        User CreateUser(User user);
+        MUser CreateUser(MUser user);
 
         [OperationContract]
         void GetUser(int id);
@@ -23,6 +23,12 @@ namespace ao.i_mail.service
         CompositeType GetDataUsingDataContract(CompositeType composite);
     }
 
+    [DataContract]
+    public class MUser
+    {
+        [DataMember]
+        public string UserName { get; set; }
+    }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
