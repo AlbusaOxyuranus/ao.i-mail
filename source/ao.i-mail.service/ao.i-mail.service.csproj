@@ -115,6 +115,7 @@
   <ItemGroup>
     <Content Include="Properties\DataSources\ao.i_account.service.models.User.datasource" />
     <Content Include="Properties\DataSources\ao.i_account.service.models.Service.datasource" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
