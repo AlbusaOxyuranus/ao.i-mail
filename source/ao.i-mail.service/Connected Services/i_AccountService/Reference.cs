@@ -223,10 +223,10 @@ namespace ao.i_mail.service.i_AccountService {
         System.Threading.Tasks.Task<ao.i_mail.service.i_AccountService.User> CreateUserAsync(ao.i_mail.service.i_AccountService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
-        void GetUser(int id);
+        ao.i_mail.service.i_AccountService.User GetUser(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetUser", ReplyAction="http://tempuri.org/IAccountService/GetUserResponse")]
-        System.Threading.Tasks.Task GetUserAsync(int id);
+        System.Threading.Tasks.Task<ao.i_mail.service.i_AccountService.User> GetUserAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/CreateService", ReplyAction="http://tempuri.org/IAccountService/CreateServiceResponse")]
         ao.i_mail.service.i_AccountService.Service CreateService(ao.i_mail.service.i_AccountService.Service service);
@@ -294,11 +294,11 @@ namespace ao.i_mail.service.i_AccountService {
             return base.Channel.CreateUserAsync(user);
         }
         
-        public void GetUser(int id) {
-            base.Channel.GetUser(id);
+        public ao.i_mail.service.i_AccountService.User GetUser(int id) {
+            return base.Channel.GetUser(id);
         }
         
-        public System.Threading.Tasks.Task GetUserAsync(int id) {
+        public System.Threading.Tasks.Task<ao.i_mail.service.i_AccountService.User> GetUserAsync(int id) {
             return base.Channel.GetUserAsync(id);
         }
         

@@ -1,8 +1,6 @@
-﻿
-using System.Runtime.Serialization;
-using System.ServiceModel;
+﻿using System.ServiceModel;
+using ao.i_mail.service.data.models;
 using ao.i_mail.service.i_AccountService;
-
 
 namespace ao.i_mail.service
 {
@@ -14,41 +12,12 @@ namespace ao.i_mail.service
         User CreateUser(User user);
 
         [OperationContract]
-        void GetUser(int id);
+        User GetUser(int id);
 
         [OperationContract]
-        string GetData(int value);
+        Config GetConfig(Config config);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
-    }
-
-    [DataContract]
-    public class MUser
-    {
-        [DataMember]
-        public string UserName { get; set; }
-    }
-
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
+        Config CreateConfig(User user, Config config);
     }
 }

@@ -5,7 +5,7 @@
       <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ao.i_account.service.models" />
-      <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ao.i_mail.service" />
+      <xsd:import schemaLocation="http://localhost:48465/MailService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ao.i_mail.service.data.models" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IMailService_CreateUser_InputMessage">
@@ -20,17 +20,17 @@
   <wsdl:message name="IMailService_GetUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserResponse" />
   </wsdl:message>
-  <wsdl:message name="IMailService_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="IMailService_GetConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfig" />
   </wsdl:message>
-  <wsdl:message name="IMailService_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  <wsdl:message name="IMailService_GetConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigResponse" />
   </wsdl:message>
-  <wsdl:message name="IMailService_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  <wsdl:message name="IMailService_CreateConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateConfig" />
   </wsdl:message>
-  <wsdl:message name="IMailService_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="IMailService_CreateConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateConfigResponse" />
   </wsdl:message>
   <wsdl:portType name="IMailService">
     <wsdl:operation name="CreateUser">
@@ -41,13 +41,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IMailService/GetUser" message="tns:IMailService_GetUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMailService/GetUserResponse" message="tns:IMailService_GetUser_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/GetData" message="tns:IMailService_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/GetDataResponse" message="tns:IMailService_GetData_OutputMessage" />
+    <wsdl:operation name="GetConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/GetConfig" message="tns:IMailService_GetConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/GetConfigResponse" message="tns:IMailService_GetConfig_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/GetDataUsingDataContract" message="tns:IMailService_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/GetDataUsingDataContractResponse" message="tns:IMailService_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="CreateConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailService/CreateConfig" message="tns:IMailService_CreateConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailService/CreateConfigResponse" message="tns:IMailService_CreateConfig_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMailService" type="tns:IMailService">
@@ -70,8 +70,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IMailService/GetData" style="document" />
+    <wsdl:operation name="GetConfig">
+      <soap:operation soapAction="http://tempuri.org/IMailService/GetConfig" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -79,8 +79,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/IMailService/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="CreateConfig">
+      <soap:operation soapAction="http://tempuri.org/IMailService/CreateConfig" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

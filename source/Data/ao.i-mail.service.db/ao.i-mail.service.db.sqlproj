@@ -61,5 +61,15 @@
     <Folder Include="dbo\Programmability" />
     <Folder Include="dbo\Programmability\Stored Procedures" />
     <Folder Include="Scripts" />
+    <Folder Include="Scripts\Constraints" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DDL - imail - Initialization.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Scripts\DDL - imail - dbo.Config.sql" />
+    <Build Include="Scripts\Constraints\DDL - iaccount - dbo.Config - constrains.sql" />
+    <Build Include="dbo\Programmability\Stored Procedures\DDL - iaccount - usp - Insert_Config.sql" />
+    <Build Include="dbo\Programmability\Stored Procedures\DDL - iaccount - usp - Get_Config.sql" />
   </ItemGroup>
 </Project>

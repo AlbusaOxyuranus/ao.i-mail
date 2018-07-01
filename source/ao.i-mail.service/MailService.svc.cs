@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
+using ao.i_mail.service.data.bal;
+using ao.i_mail.service.data.models;
 using ao.i_mail.service.i_AccountService;
 
 namespace ao.i_mail.service
@@ -15,30 +17,27 @@ namespace ao.i_mail.service
 
         public User CreateUser(User user)
         {
-            //var myBinding = new BasicHttpBinding();
-            //var myEndpoint = new EndpointAddress("http://localhost:62786/AccountService.svc");
-            ////var myChannelFactory = new ChannelFactory<IMyService>(myBinding, myEndpoint);
-            //var client = new AccountServiceClient(myBinding,myEndpoint);
             var client = new AccountServiceClient();
-            var r= client.CreateUser(new User() { Password = "ps", Username = "ddd" });
-            return new User();
+            return client.CreateUser(user);
         }
 
-        public void GetUser(int id)
+        public User GetUser(int id)
+        {
+            var client = new AccountServiceClient();
+            return client.GetUser(id);
+        }
+
+        public Config GetConfig(Config config)
         {
             throw new NotImplementedException();
         }
 
-        public string GetData(int value)
+        public Config CreateConfig(User user, Config config)
         {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null) throw new ArgumentNullException("composite");
-            if (composite.BoolValue) composite.StringValue += "Suffix";
-            return composite;
+           using (var bc = new BusinessContext(new AppMode()))
+            {
+                return bc.Add(new Config() { Key = "DenisProfile", Value = "config-json", UserId =user.Id });
+            }
         }
     }
 }

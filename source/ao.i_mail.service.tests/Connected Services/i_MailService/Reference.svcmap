@@ -27,7 +27,7 @@
     <MetadataFile FileName="MailService.wsdl" MetadataType="Wsdl" ID="655f4cb6-fb32-4476-a457-d79cf63af3bc" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?wsdl" />
     <MetadataFile FileName="MailService2.xsd" MetadataType="Schema" ID="ca401302-ead7-4d99-be19-e57d21d5e73d" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd2" />
     <MetadataFile FileName="MailService.disco" MetadataType="Disco" ID="81e5b944-5cbd-4c52-a105-3d14bdf481a8" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?disco" />
-    <MetadataFile FileName="MailService3.xsd" MetadataType="Schema" ID="37ba8839-6067-4661-b2ab-7e2b1042e2ef" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MailService3.xsd" MetadataType="Schema" ID="99ebd271-c126-4b99-b588-901949d57cfb" SourceId="1" SourceUrl="http://localhost:48465/MailService.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

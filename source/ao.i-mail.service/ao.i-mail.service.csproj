@@ -97,6 +97,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppMode.cs" />
     <Compile Include="Connected Services\i_AccountService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,6 +127,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\i_AccountService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ao.i-mail.service.data\ao.i-mail.service.data.csproj">
+      <Project>{3F70C334-6914-40C0-85B8-272D73FC1E0D}</Project>
+      <Name>ao.i-mail.service.data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
